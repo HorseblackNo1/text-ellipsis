@@ -1,0 +1,10 @@
+<!--components/textEllipsis/textEllipsis.wxml-->
+<view class="content">
+  <view class="contentInner textStyle showArea {{!onFold ? 'text-clamp' + maxline : ''}}" bindtap="{{foldable ? 'handleFold' : ''}}">{{content}}</view>
+  <view class="contentInner hideArea">{{content}}</view>
+
+  <view class="comment_more actionStyle" catchtap="handleFold" wx:if="{{showFold}}">
+    {{onFold ? "收起" : "展开"}}
+    <image class="open {{onFold  && 'icon_put'}}" wx:if="{{PublicImgUrl}}" src="{{PublicImgUrl+'/img/xcxCommon/newIcon/ca_open.png'}}"></image>
+  </view>
+</view>

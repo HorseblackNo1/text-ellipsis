@@ -1,2 +1,0 @@
-# text-ellipsis
-text-ellipsis
